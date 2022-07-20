@@ -101,4 +101,32 @@ Output:
 <class 'tvm.driver.build_module.OperatorModule'>
 
 
+Example
+-------------
+First we define the model in Python:
+
+![Screenshot from 2022-07-20 10-50-53](https://user-images.githubusercontent.com/104573172/179940178-ee393383-7a80-4e51-b36f-a6d77555ca17.png)
+
+
+When we define the model, we create scripted_model with jit.trace() function. After that with from_pytorch() function we create IR Module namde mod.
+
+IR Module:
+
+![Screenshot from 2022-07-20 10-52-10](https://user-images.githubusercontent.com/104573172/179940489-a8197101-3f0d-44ca-a3bb-8e68a8fd879c.png)
+
+![Screenshot from 2022-07-20 10-52-27](https://user-images.githubusercontent.com/104573172/179940506-f9e98f2c-4240-4f83-bd4f-574e2835949c.png)
+
+
+Then we build the lib and create GraphModule with graph executor.
+
+
+![Screenshot from 2022-07-20 10-57-24](https://user-images.githubusercontent.com/104573172/179941671-e9e95e7d-bb69-41c3-b91e-0038fa97605f.png)
+
+
+![Screenshot from 2022-07-20 10-59-22](https://user-images.githubusercontent.com/104573172/179942248-0a7d86cb-8cc4-4a19-87a4-4fb7cb86e4c3.png)
+
+
+![Screenshot from 2022-07-20 10-59-56](https://user-images.githubusercontent.com/104573172/179942264-c2fe7249-4b71-405c-a31b-ba60d26d92f1.png)
+
+
 
